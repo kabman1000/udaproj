@@ -58,6 +58,7 @@ jobs:
 
     steps:
       - run: apk add --update curl
+      - run: apk add --update awscli
       - run: 
           name: smoke test
           command: return 1 
