@@ -24,7 +24,7 @@ jobs:
   # Exercise: Config and Deployment
   configure_infrastructure: 
     docker:
-      - image: python:3.7-alpine3.11
+      - image: python:3.10.5-alpine3.16
     steps:
       - checkout
       - add_ssh_keys:
@@ -42,5 +42,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      #- create_infrastructure
-      - configure_infrastructure
+      - create_infrastructure
+      #- configure_infrastructure
